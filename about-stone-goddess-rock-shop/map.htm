@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Map to Stone Goddess Store</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAnD7zdyR74ConQrcSSRK6XBQdpdP3xdcqfyxQqSnk4TD4-a1wFBStToV3urx5xw0uowqjg-WI1bl0yg"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+
+    function load() {
+      if (GBrowserIsCompatible()) {
+      	
+		// A TextualZoomControl is a GControl that displays textual "Zoom In"
+// and "Zoom Out" buttons (as opposed to the iconic buttons used in
+// Google Maps).
+function TextualZoomControl() {
+}
+TextualZoomControl.prototype = new GControl();
+
+// Creates a one DIV for each of the buttons and places them in a container
+// DIV which is returned as our control element. We add the control to
+// to the map container and return the element for the map class to
+// position properly.
+TextualZoomControl.prototype.initialize = function(map) {
+  var container = document.createElement("div");
+
+  var zoomInDiv = document.createElement("div");
+  this.setButtonStyle_(zoomInDiv);
+  container.appendChild(zoomInDiv);
+  zoomInDiv.appendChild(document.createTextNode("Zoom In"));
+  GEvent.addDomListener(zoomInDiv, "click", function() {
+    map.zoomIn();
+  });
+
+  var zoomOutDiv = document.createElement("div");
+  this.setButtonStyle_(zoomOutDiv);
+  container.appendChild(zoomOutDiv);
+  zoomOutDiv.appendChild(document.createTextNode("Zoom Out"));
+  GEvent.addDomListener(zoomOutDiv, "click", function() {
+    map.zoomOut();
+  });
+
+  map.getContainer().appendChild(container);
+  return container;
+}
+
+// By default, the control will appear in the top left corner of the
+// map with 7 pixels of padding.
+TextualZoomControl.prototype.getDefaultPosition = function() {
+  return new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(7, 7));
+}
+
+// Sets the proper CSS for the given button element.
+TextualZoomControl.prototype.setButtonStyle_ = function(button) {
+  button.style.textDecoration = "underline";
+  button.style.color = "#0000cc";
+  button.style.backgroundColor = "white";
+  button.style.font = "small Arial";
+  button.style.border = "1px solid black";
+  button.style.padding = "2px";
+  button.style.marginBottom = "3px";
+  button.style.textAlign = "center";
+  button.style.width = "6em";
+  button.style.cursor = "pointer";
+}
+
+		var map = new GMap2(document.getElementById("map"));
+		map.addControl(new GSmallMapControl());
+		map.addControl(new GMapTypeControl());
+		map.addControl(new TextualZoomControl());
+        map.setCenter(new GLatLng(37.389007, -77.426229), 13);
+		var point = new GPoint(parseFloat(-77.426229),parseFloat(37.389007));
+        var marker = new GMarker(point);
+		map.addOverlay(marker);
+		
+
+// Our info window content
+var infoTabs = [
+  new GInfoWindowTab("Address", "Stone Goddess Rock Shop<br />10017 Jefferson Davis Hwy.<br /> Richmond Va. 23237<br /> I-95  exit 62, Route 288 to 301 North 1/2 Mile"),
+  new GInfoWindowTab("Hours","Monday and Tuesday Closed<br />Wednesday Through Friday 10 AM TO 5:30PM<br />Saturday	10 AM TO 5 PM<br />Sunday 1 PM TO 5 PM")
+];
+
+// Place a marker in the center of the map and open the info window
+// automatically
+var marker = new GMarker(map.getCenter());
+GEvent.addListener(marker, "click", function() {
+  marker.openInfoWindowTabsHtml(infoTabs);
+});
+map.addOverlay(marker);
+marker.openInfoWindowTabsHtml(infoTabs);
+	  }
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+<div align="center" id="map" style="width: 500px; height: 300px">
+
+  </div>
+  </body>
+</html>

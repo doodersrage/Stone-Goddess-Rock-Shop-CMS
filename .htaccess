@@ -1,0 +1,18 @@
+Options +Indexes
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /
+
+rewritecond %{http_host} ^stonegoddess\.com [nc]
+rewriterule ^(.*)$ http://www.stonegoddess.com/$1 [r=301,nc]
+
+RewriteRule ^Stone-Goddess-Stonetalk/([^/\.]+)/?$ http://www.stonegoddess.com/Stone-Goddess-Stonetalk/?mineral=$1 [L]
+
+ErrorDocument 404 /errors/404.php
+ErrorDocument 401 /errors/401.php
+ErrorDocument 403 /errors/401.php
+
+RewriteRule ^sitemap.html sitemap.php [L,QSA]
+
+RewriteRule ^Stone-Goddess-Store/ http://stonegoddess.com/catalog/ [R=301,L]
+RewriteRule ^Stone-Goddess-AboutUS/ http://stonegoddess.com/about-stone-goddess-rock-shop/ [R=301,L]

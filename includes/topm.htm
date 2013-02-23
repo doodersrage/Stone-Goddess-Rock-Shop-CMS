@@ -1,0 +1,42 @@
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="../images/mossyrocks.jpg">
+  <tr> 
+    <td width="72%" rowspan="2"><img src="../images/stonegoddessbannern.jpg" width="677" height="70" /></td>
+
+  </tr>
+  <tr> 
+    <td width="28%" align="center"> 
+	<%  if session("joinedml")=true then
+	else
+	if Request.Form("bsubmit") = "Join" then
+	if InStr(request.form("email"),"@")=0 then 
+	Response.Write("<script language='javascript'>alert('You did not enter a valid email address.')</script>")
+	%>
+	   <form name="form1" ACTION = "" METHOD = "POST">
+        <font color="#CC0000"><strong><font color="#BDFFAA">Join our NewsLetter 
+        mailing list?</font><br />
+         </strong></font> 
+        <input name="email" type="text" size="15">
+        <input type="submit" name="bsubmit" value="Join">
+       </form>
+	 <%
+	else
+	emailaddr = request.form("email")
+	call joinmaillist(emailaddr)
+	session("joinedml")=true
+	Response.Write("<script language='javascript'>alert('Thank you for joining our mailing list.')</script>")
+	end if
+	else
+	%>
+      <form name="form1" ACTION = "" METHOD = "POST">
+        <font color="#CC0000"><strong><font color="#BDFFAA">Join our NewsLetter 
+        mailing list?</font><br />
+         </strong></font> 
+        <input name="email" type="text" size="15">
+        <input type="submit" name="bsubmit" value="Join">
+      </form>
+	  <% end if 
+	  	 end if
+	  %>
+	</td>
+  </tr>
+</table>

@@ -1,0 +1,1 @@
+<?php a:3:{s:5:"admin";a:3:{s:3:"pwd";s:10:"StoreOwner";s:5:"group";s:4:"main";s:6:"access";i:1;}s:7:"JeanRed";a:3:{s:3:"pwd";s:10:"StoreOwner";s:5:"group";s:4:"main";s:6:"access";i:1;}s:4:"Tony";a:3:{s:3:"pwd";s:7:"Namaste";s:5:"group";s:4:"main";s:6:"access";i:1;}}?>

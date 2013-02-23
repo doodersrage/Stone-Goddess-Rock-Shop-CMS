@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+    <TITLE>http-analyze Bug Report</TITLE>
+<STYLE>
+<!--
+BODY  { color:		black;
+	background:	#F0F7F8;
+	margin:		.5em;
+}
+
+H3    {	font-family:	Helvetica,Arial,Geneva,sans-serif;
+	font-size:	16pt;
+	color:		darkblue;
+	background:	#CCCCCC;
+}
+
+FONT.sm {
+	font-family:	Helvetica,Arial,Geneva,sans-serif;
+	font-size:	8pt;
+	margin:		0px;
+}
+
+CAPTION {
+	font-family:	Helvetica,Arial,Geneva,sans-serif;
+	font-size:	8pt;
+	color:		black;
+	margin:		0px;
+}
+
+TABLE, TR, TD, P {
+	font-family:	Helvetica,Arial,Geneva,sans-serif;
+	font-size:	small;
+	color:		black;
+}
+
+TH {
+	font-family:	Helvetica,Arial,Geneva,sans-serif;
+	font-weight:	bold;
+	font-size:	12pt;
+	color:		black;
+}
+
+PRE.ex {
+        font-family:    Lucida-Typewriter,fixed;
+        font-size:      12pt;
+        color:          black;
+        margin-left:    1em;
+        white-space:    pre;
+}
+-->
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="#F0F7F8">
+
+<TABLE BORDER="0" CELLPADDING="2" WIDTH="100%">
+<TR><TD ALIGN="CENTER" VALIGN="TOP" BGCOLOR="#CCCCCC"><A
+ HREF="http://www.netstore.de/Supply/http-analyze/"><IMG
+ SRC="file:/usr/local/lib/http-analyze/btn/ha2.0_sm.gif"
+ ALIGN="ABSMIDDLE" ALT="" WIDTH="102" HEIGHT="60" BORDER="0" HSPACE="2" VSPACE="2"></A></TD>
+
+<TD VALIGN="TOP"><H3><FONT FACE="Helvetica,Geneva,sans-serif">
+HTTP-ANALYZE BUG REPORT</FONT></H3>
+<HR NOSHADE></TD></TR>
+
+<TR><TD VALIGN="TOP" BGCOLOR="#CCCCCC"><B><FONT SIZE="2"
+ FACE="Helvetica,Geneva,sans-serif">Open a Call</FONT></B></TD>
+<TD VALIGN="TOP">
+<P>
+<FONT SIZE="2">Please use this form to open a call or submit a bug report.</FONT>
+</P>
+
+<P>
+<FONT COLOR="#A00000" SIZE="2"><B>Please note:</B></FONT>
+<FONT SIZE="2">Only registered customers of a Commercial Service License
+are entitled to receive support. If you use the freeware version of
+<B>http-analyze</B> under the Personal License, we welcome bug reports,
+but we can't guarantee that you will receive an answer.</FONT></P>
+
+<FORM METHOD="POST" ACTION="http://www.netstore.de/bin/ha-call.cgi">
+<CENTER>
+<TABLE BORDER="1" CELLPADDING="2" CELLSPACING="0">
+<CAPTION>
+<FONT SIZE="1">If you use <B>http-analyze -X</B> to generate an URL for
+this bug reporting form, registration data is filled in automatically.</FONT>
+</CAPTION>
+<TR><TD><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><B>Version:</B></FONT></TD>
+<TD COLSPAN="2"><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><INPUT
+ TYPE="TEXT" NAME="version" SIZE="48"></FONT></TD></TR>
+
+<TR><TD><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><B>Platform/OS:</B></FONT></TD>
+<TD COLSPAN="2"><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><INPUT
+ TYPE="TEXT" NAME="platform" SIZE="48"></FONT></TD></TR>
+
+<TR><TD><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><B>Customer:</B></FONT></TD>
+<TD COLSPAN="2"><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><INPUT
+ TYPE="TEXT" NAME="customer" SIZE="48"></FONT></TD></TR>
+
+<TR><TD><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><B>Registration ID:</B></FONT></TD>
+<TD COLSPAN="2"><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><INPUT
+ TYPE="TEXT" NAME="regID" SIZE="48"></FONT></TD></TR>
+
+<TR><TD><FONT SIZE="2" FACE="Helvetica,Geneva,Swiss,sans-serif"><INPUT
+ TYPE="SUBMIT" NAME="submit" VALUE="Open a Call"></FONT></TD>
+<TD ALIGN="RIGHT" COLSPAN="2"><FONT SIZE="2"
+ FACE="Helvetica,Geneva,Swiss,sans-serif"><INPUT TYPE="RESET"
+ NAME="reset" VALUE="Clear all fields"></FONT>
+
+</TD></TR>
+
+</TABLE>
+</CENTER>
+</FORM>
+<HR NOSHADE></TD></TR>
+
+<TR><TD VALIGN="TOP" BGCOLOR="#cccccc"><B><FONT SIZE="2"
+ FACE="Helvetica,Geneva,sans-serif">Core dumps</FONT></B></TD>
+
+<TD VALIGN="TOP"><P><FONT SIZE="2">In case of core dumps, please check the
+<A HREF="http://support.netstore.de/">Customer Support</A> site first if
+there is a <I>rollup patch</I> available already. Please <B>do not</B>
+send us the core dump itself, but rather list the stack backtrace using
+a symbolic debugger such as <I>sdb</I>, <I>dbx</I>, or <I>gdb</I>. This
+stack backtrace can show the exact location of the crash. To create a
+stack backtrace, follow these steps (since different systems have different
+symbolic debuggers, the following commands may not work literally on your
+platform, but you probably have another debugger such as <I>sdb</I>,
+<I>gdb</I>, or even <I>adb</I> which use similar commands to list a stack
+backtrace:</FONT></P>
+<OL>
+<LI><FONT SIZE="2">By default, <B>http-analyze</B> is compiled with the
+compiler option <B>-g</B>, which includes debugging information (necessary
+for the symbolic debugger) in the executable. If you did remove this option,
+you have to re-compile <B>http-analyze</B> again with <B>-g</B>.</FONT> 
+<LI><FONT SIZE="2">Run the program to create the core file. Depending on the
+location of the program flow, the core may be created in the current directory
+or in the directory specified by either the <B>-o</B> option on the command
+line or the &quot;OutputDir directive in the configuration file.</FONT>
+<LI><FONT SIZE="2">Then, start a symbolic debugger with the name of the
+executable as the first and the name of the core file as the second argument.
+List the stack backtrace using the appropriate command for the debugger
+(<B>where</B> in <I>gdb</I>, <B>t</B> in <I>dbx</I> and <I>sdb</I>):</FONT> 
+<PRE class="ex"><FONT SIZE="2">
+$ dbx http-analyze testd/core
+ dbx version 6.2 Mar 9 1996 15:23:28
+ Core from signal SIGSEGV: Segmentation violation
+ (dbx) t
+ &gt; 0 strlen(0x3d3d0000, 0x10008c53, 0x0, 0x1) [&quot;strlen.s&quot;:57]
+   1 _doprnt(0x10008c10, 0x7fff24c0, 0xfb48db4, 0x1) [&quot;doprnt.c&quot;:1222]
+   2 fprintf(0xfb48db4, 0x10008c10, 0xfffffff9, 0x61) [&quot;fprintf.c&quot;:45]
+   3 prNavYear(ofp=0xfb48db4) [&quot;http-analyze.c&quot;:2277]
+   4 prMonIndex(stdir=&quot;www1997&quot;, current=0, last=0) [&quot;http-analyze.c&quot;:2919]
+   5 main(argc=5, argv=0x7fff2f14) [&quot;http-analyze.c&quot;:1273]
+   6 __istart() [&quot;crt1tinit.s&quot;:13]
+ (dbx) quit
+ $
+</FONT></PRE>
+</OL>
+<P>
+<FONT SIZE="2">Include this stack backtrace together with a short
+description what you did in this bug report.</FONT></P>
+<P>
+<FONT SIZE="2">Note: If the debugger is not able to tell you the location
+of the crash, this means that the frame and stack pointers got corrupted.
+In this case, the use of a debugger or the core file isn't of much help.</FONT></P>
+</TD></TR>
+</TABLE>
+
+<CENTER>
+<P ALIGN="CENTER">
+<HR NOSHADE>
+<A HREF="/copyrights.html"><FONT class="sm" SIZE="1"
+ FACE="Helvetica,Geneva,sans-serif">Copyright &#169; by RENT-A-GURU&#174;</FONT></A></P>
+</CENTER>
+
+</BODY>
+</HTML>

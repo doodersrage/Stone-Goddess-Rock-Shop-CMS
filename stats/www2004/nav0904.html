@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+  <META NAME="ROBOTS" CONTENT="NONE">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Navigation Window</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- // begin hide script
+
+// Load a new page into the creator's window
+function loadPage(loc) {
+	if (!opener)
+		creator.location = loc;
+	else	opener.location = loc;
+}
+
+// Close the navigation window
+function closeWin() {
+	loadPage('../index.html');
+	window.close(self);
+}
+// Create the VRML window
+function createVRMLWin(loc) {
+	vrmlWin = window.open(loc, 'vrml_win','toolbar=no,location=no,directories=no,status=yrd,menubar=no,scrollbars=no,resizable=yes,width=520,height=420');
+	vrmlWin.creator = self;
+}
+
+// end hide script -->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#EFEFEF">
+<CENTER><P ALIGN="CENTER">
+<TABLE WIDTH="100%" BORDER="2" CELLSPACING="1" CELLPADDING="1">
+<TR><TD HEIGHT="4"></TD></TR>
+<TR><TH NOWRAP COLSPAN="2" BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif">Full Statistics for <A HREF="javascript:loadPage('totals0904.html');">September 2004</A></FONT></TH></TR>
+<TR><TD HEIGHT="4"></TD></TR>
+<TR><TD BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif">Hits:</FONT></TD>
+<TD NOWRAP BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif"><A HREF="javascript:loadPage('days0904.html');">by Day</A> /
+<A HREF="javascript:loadPage('avload0904.html');">by Weekday &amp; Hour</A> /
+<A HREF="javascript:loadPage('country0904.html');">by Country</A> /
+<A HREF="javascript:createVRMLWin('3Dstats0904.html');">3D model</A>
+</FONT></TD></TR>
+<TR><TD BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif">Items/URLs:</FONT></TD>
+<TD NOWRAP BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif"><A HREF="javascript:loadPage('topurl0904.html');">Top Ten</A> /
+<A HREF="javascript:loadPage('./files0904.html');">Overview</A> /
+<A HREF="javascript:loadPage('./rfiles0904.html');">Not&nbsp;Found</A> /
+<A TARGET="lists" HREF="./lfiles0904.html">List</A>
+</FONT></TD></TR>
+<TR><TD NOWRAP BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif">Browser Type:</FONT></TD>
+<TD NOWRAP BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif"><A HREF="javascript:loadPage('topuag0904.html');">Top Ten</A> /
+<A HREF="javascript:loadPage('./agents0904.html');">Overview</A> /
+<A TARGET="lists" HREF="./lagents0904.html">List</A>
+</FONT></TD></TR>
+<TR><TD NOWRAP BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif">Referrer URL:</FONT></TD>
+<TD NOWRAP BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif"><A HREF="javascript:loadPage('topref0904.html');">Top Ten</A> /
+<A HREF="javascript:loadPage('./refers0904.html');">Overview</A> /
+<A TARGET="lists" HREF="./lrefers0904.html">List</A>
+</FONT></TD></TR>
+<TR><TD HEIGHT="4"></TD></TR>
+<TR><TD NOWRAP COLSPAN="2" ALIGN="CENTER" BGCOLOR="#CCCCCC"><FONT SIZE="2" FACE="Helvetica,Arial,Geneva,sans-serif"><A HREF="jsnav.html" onClick="loadPage('index.html');return true;">Summary for 2004</A> / <A HREF="javascript:closeWin();">Close navigation window</A></FONT></TD></TR>
+<TR><TD HEIGHT="4"></TD></TR>
+</TABLE></P>
+</CENTER>
+</BODY>
+</HTML>

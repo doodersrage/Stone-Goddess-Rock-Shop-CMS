@@ -1,0 +1,5 @@
+ErrorDocument 404 http://stonegoddess.com/messageboard/index.html
+ErrorDocument 401 http://stonegoddess.com/messageboard/index.html
+ErrorDocument 403 http://stonegoddess.com/messageboard/index.html
+
+rewriterule ^(.*) http://stonegoddess.com/index.html [r=301,nc]

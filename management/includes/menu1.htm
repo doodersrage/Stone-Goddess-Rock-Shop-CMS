@@ -1,0 +1,23 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=375,height=200,left = 192,top = 144');");
+}
+// End -->
+</script>
+<ul>
+  <?PHP if (empty($_SESSION['loginadminokay'])) { ?><li>Login to update site.</li><?PHP } else { ?>
+  <li <?PHP if ($strPage == 1) { ?>class="selected"<?PHP } ?>><a title="Click here to edit the Stone Talk Section." href="http://www.stonegoddess.com/management/?P=1">StoneTalk</a></li>
+  <li <?PHP if ($strPage == 2) { ?>class="selected"<?PHP } ?>><a title="Click here to edit the NewsLetter Section." href="http://www.stonegoddess.com/management/?P=2">NewsLetter</a></li>
+ <li <?PHP if ($strPage == 3) { ?>class="selected"<?PHP } ?>><a title="Click here to send out a NewsLetter." href="http://www.stonegoddess.com/management/?P=3">Send NewsLetter</a></li>
+ <li <?PHP if ($strPage == 4) { ?>class="selected"<?PHP } ?>><a title="Click here to edit the New Items Section." href="http://www.stonegoddess.com/management/?P=4">New Items</a></li>
+<!--  <li <?PHP if ($strPage == 5) { ?>class="selected"<?PHP } ?>><a title="Click here to post new show times." href="http://www.stonegoddess.com/management/?P=5">Show Times</a></li>-->  
+ <li <?PHP if ($strPage == 7) { ?>class="selected"<?PHP } ?>><a title="Click here to edit the gallery." href="http://www.stonegoddess.com/management/?P=7">Gallery</a></li>
+  <li <?PHP if ($strPage == 8) { ?>class="selected"<?PHP } ?>><a title="Click here to edit Users." href="http://www.stonegoddess.com/management/?P=8">Users</a></li>
+    <?PHP if ($_SESSION['admin'] = 1) { ?><li <?PHP if ($strPage == 11) { ?>class="selected"<?PHP } ?>><a title="Click here to upload images." href="http://www.stonegoddess.com/management/?P=11">Image Uploader</a></li><?PHP } ?>
+  <li <?PHP if ($strPage == 10) { ?>class="selected"<?PHP } ?>><a title="Click here for documentation." href="http://www.stonegoddess.com/management/?P=10">Help Me</a></li>
+  <li><a title="Click here to access store admin." href="http://www.stonegoddess.com/catalog/admin/" target="_blank">Store Admin</a></li>
+  <li><a title="Click here to logout of the system." href="http://www.stonegoddess.com/management/?logout=1">Logout</a></li><?PHP } ?>
+</ul>

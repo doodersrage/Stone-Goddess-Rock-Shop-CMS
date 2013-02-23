@@ -1,0 +1,27 @@
+.ad_td {
+	font-size : 11px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-weight : normal;
+	background: white
+	}
+.ad_td a {
+	color: black
+	}
+.ad_hs {
+	font-size : 11px;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-weight : bold;
+	background: #dbeaf5
+}
+.ad_hb {
+	font-size : 18px;
+	FONT-FAMILY: tahoma, verdana, arial;
+	font-weight : bold;
+	color: #dbeaf5
+}
+a.ad_hb { text-decoration:none;}
+.ad_form {
+	font-size : 11px;
+	font-family: tahoma, verdana, arial
+	font-weight : normal;
+	}

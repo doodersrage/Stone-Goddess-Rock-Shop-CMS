@@ -1,0 +1,35 @@
+	form
+		{margin: 5px;}
+	.header1
+		{color: #ffffff; background: #4682B4; font-weight: bold; font-family: Tahoma, Verdana; font-size: 13px; margin: 0px; padding: 2px;}
+	.header2, h2
+		{color: #000000; background: #DBEAF5; font-weight: bold; font-family: Tahoma, Verdana; font-size: 12px;}
+	.intd
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px; padding-left: 15px;}
+	.Cheader
+		{color: #ffffff; font-family: Tahoma, Verdana; font-size: 11px;}
+	.Cheadernew
+		{color:#000; font-family: Tahoma, Verdana; font-size: 11px;}
+	.Cheader2
+		{color: #ffffff; font-family: Tahoma, Verdana; font-size: 11px;}
+	.Ccur
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px;}
+	.Cbody
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px;}
+	.Cbodyh
+		{color: #606060; font-family: Tahoma, Verdana; font-size: 11px;}
+	.Cwe
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px;}
+
+	.C2header
+		{color: #4682B4; font-family: Tahoma, Verdana; font-size: 11px;}
+	.C2header2
+		{color: #4682B4; font-family: Tahoma, Verdana; font-size: 11px;}
+	.C2cur
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px;}
+	.C2body
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px;}
+	.C2bodyh
+		{color: #99CCFF; font-family: Tahoma, Verdana; font-size: 11px;}
+	.C2we
+		{color: #FF33CC; font-family: Tahoma, Verdana; font-size: 11px;}

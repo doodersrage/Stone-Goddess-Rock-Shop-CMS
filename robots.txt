@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /management/
+Disallow: /errors/
+Disallow: /old/

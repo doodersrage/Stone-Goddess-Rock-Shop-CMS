@@ -1,0 +1,16 @@
+vti_encoding:SR|utf8-nl
+vti_timelastmodified:TR|04 May 2003 22:11:33 -0000
+vti_extenderversion:SR|5.0.2.2623
+vti_nosourcecontrol:SR|True
+vti_author:SR|HOME-3S6RN6O4MN\\Danny Cason
+vti_modifiedby:SR|HOME-3S6RN6O4MN\\Danny Cason
+vti_nexttolasttimemodified:TR|04 May 2003 22:11:33 -0000
+vti_timecreated:TR|04 May 2003 22:11:33 -0000
+vti_timelastindexed:TW|04 May 2003 22:11:33 -0000
+vti_lineageid:SR|{B8FFF5CF-CEF4-495D-B04C-DBD74319401C}
+vti_cacheddtm:TX|04 May 2003 22:11:33 -0000
+vti_filesize:IR|0
+vti_backlinkinfo:VX|
+vti_syncwith_65.108.89.110\:80:TR|04 May 2003 22:11:34 -0000
+vti_syncofs_stonegoddess.com\:21:TW|16 May 2003 15:28:00 -0000
+vti_syncwith_stonegoddess.com\:21:TX|04 May 2003 22:11:33 -0000

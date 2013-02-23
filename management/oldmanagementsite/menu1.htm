@@ -1,0 +1,22 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=375,height=200,left = 192,top = 144');");
+}
+// End -->
+</script>
+<ul>
+  <% if Session("loginadminokay") = "" then %><li>Login to update site.</li><% else %>
+  <li <% if strPage = 1 then %>class="selected"<%end if%>><a title="Click here to edit the Stone Talk Section." href="http://stonegoddess.com/management/default.asp?P=1">StoneTalk</a></li>
+  <li <% if strPage = 2 then %>class="selected"<%end if%>><a title="Click here to edit the NewsLetter Section." href="http://stonegoddess.com/management/default.asp?P=2">NewsLetter</a></li>
+  <li <% if strPage = 3 then %>class="selected"<%end if%>><a title="Click here to send out a NewsLetter." href="http://stonegoddess.com/management/default.asp?P=3">Send NewsLetter</a></li>
+  <li <% if strPage = 4 then %>class="selected"<%end if%>><a title="Click here to edit the New Items Section." href="http://stonegoddess.com/management/default.asp?P=4">New Items</a></li>
+  <li <% if strPage = 5 then %>class="selected"<%end if%>><a title="Click here to post new show times." href="http://stonegoddess.com/management/default.asp?P=5">Show Times</a></li>
+  <li <% if strPage = 7 then %>class="selected"<%end if%>><a title="Click here to edit the gallery." href="http://stonegoddess.com/management/default.asp?P=7">Gallery</a></li>
+  <li <% if strPage = 8 then %>class="selected"<%end if%>><a title="Click here to edit Users." href="http://stonegoddess.com/management/default.asp?P=8">Users</a></li>
+    <% if Session("admin") = 1 then %><li <% if strPage = 9 then %>class="selected"<%end if%>><a title="Click here to upload images." href="javascript:popUp('http://stonegoddess.com/management/imageupload1.php')">Image Uploader</a></li><% end if %>
+  <li <% if strPage = 10 then %>class="selected"<%end if%>><a title="Click here for documentation." href="http://stonegoddess.com/management/default.asp?P=10">Help Me</a></li>
+  <li><a title="Click here to logout of the system." href="http://stonegoddess.com/management/default.asp?logout=1">Logout</a></li><% end if %>
+</ul>

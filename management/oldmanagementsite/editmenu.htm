@@ -1,0 +1,25 @@
+<script type="text/javascript">
+function insert(el,ins) {
+if (el.setSelectionRange){
+el.value = el.value.substring(0,el.selectionStart) + ins + el.value.substring(el.selectionStart,el.selectionEnd) + el.value.substring(el.selectionEnd,el.value.length);
+}
+else if (document.selection && document.selection.createRange) {
+el.focus();
+var range = document.selection.createRange();
+range.text = ins + range.text;
+}
+}
+</script>
+          <table width="100%" border="1">
+            <tr> 
+              
+    <td> <input name="button2" type="button" onClick="insert(this.form.Descri,'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')" value="INDENT">
+      <input name="button" type="button" onClick="insert(this.form.Descri,'<p>')" value="PARAGRAPH"> 
+                <input name="button" type="button" onClick="insert(this.form.Descri,'<STRONG>')" value="BOLD"> 
+                <input name="button" type="button" onClick="insert(this.form.Descri,'</STRONG>')" value="END BOLD"> 
+                <input name="button" type="button" onClick="insert(this.form.Descri,'<i>')" value="ITALICIZE"> 
+                <input name="button" type="button" onClick="insert(this.form.Descri,'</i>')" value="END ITALICIZE">
+    </td>
+            </tr>
+          </table>
+          

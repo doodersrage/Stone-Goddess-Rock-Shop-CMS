@@ -1,0 +1,94 @@
+<?
+$help=array(
+'add_del'=>'<h2>Control Panel<a name="#control_panel"></a></h2>
+<h3>Add /delete calendar<a name="#add_del"></a> </h3>
+<p>To add new calendar:</p>
+<ol>
+	<li>Type in text field in upper right page corner the desired calendar name (use only Latin letters and digits).
+	<li>Click on &quot;Add calendar&quot; link.
+</ol>
+<p>To delete calendar:</p>
+<ol>
+	<li>Click on &quot;Delete calendar&quot; link corresponding to the name of calendar you want to delete.
+</ol>
+',
+'events'=>'
+<h3>Events  configuration<a name="#events"></a></h3>
+<p>It is possible either to add an event or to redirect to custom URL.</p>
+',
+'events_editor'=>'
+<h3>Events editor<a name="#events_editor"></a></h3>
+<p>To add event:</p>
+<ol>
+	<li>Choose the desired calendar date.
+	<li>Type in message subject and body into corresponding form fields.
+	<li>Click on &quot;Add event&quot; button.
+</ol>
+<p>To edit event:</p>
+<ol>
+	<li>Click on &quot;Edit event&quot; button.
+	<li>Edit message body and subject.
+</ol>
+<p>To delete event:</p>
+<ol>
+	<li>Click on &quot;Delete&quot; link corresponding to the event you want to delete.
+</ol>
+',
+'custom_url'=>'
+<h3>To redirect to custom URL<a name="#custom_url"></a></h3>
+<ol>
+	<li>Type in desired URL, target and event title into correspondent form fields. Event title will be tooltipped when you move your mouse over event\'s date on the calendar.
+</ol>
+
+',
+'settings'=>'<h3>Settings<a name="#settings"></a></h3>
+<p>You can change any information available on this page and then perform one of the actions clicking on the corresponding button:</p>
+<p><b>Apply:</b> All changed information will be applied to calendar visible on admin page. CHANGES WILL NOT INFLUENCE on calendar of main page.</p>
+<p><b>Save:</b> All changed information will be applied to calendar visible on admin page AND ALSO to calendar of main page. Changes will be saved and return IS NOT POSSIBLE.</p>
+<p><b>Reset to saved: </b>Resets parameter values to the ones being at the moment of the last "Save" operation.</p>
+<p><b>Reset to Defaults:</b> Resets parameter values to the ones being at the moment of the calendar installation.</p>',
+
+'alternative_url'=>'<h3>Alternative URL<a name="#alternative_url"></a></h3> 
+<p>You can enter anyone URL using variables for containing values of day, month and year of the appropriate event.</p>',
+'color'=>'<p><b>Color settings</b><a name="#color_settings"></a>:</p>
+<p>Feel free to change any color for presented fields and therefore make calendar design the most similar to your site design.</p>
+<p>Note: weekends font color is applicable only to days of current month but weekends background color - to all weekends regardless of month</p>
+',
+'general'=>'<p><b>General settings</b><a name="#general_settings"></a>:</p>
+<p>Show week numbers: calendar may have none, top/right or bottom/left displayed week numbers.</p>
+<p>Days location: calendar may have none, top/right or bottom/left displayed days.</p>
+<p>Title format: you can change title output format according to the following rules:</p>
+<ul>
+	<i>F</i> &nbsp;letter will be replaced by full month name; i.e. "January"<br>
+	<i>l</i> &nbsp;letter will be replaced by full day name; i.e. "Monday"<br>
+	<i>m</i> &nbsp;letter will be replaced by current month double-digit index; i.e. "01" to "12"<br>
+	<i>M</i> &nbsp;letter will be replaced by 3 initial letters of current month; i.e. "Jan"<br>
+	<i>n</i> &nbsp;letter will be replaced by current month index without leading zeros; i.e. "1" to "12"<br>
+	<i>Y</i> &nbsp;letter will be replaced by current year in 4 digits representation; i.e. "2003"<br>
+	<i>y</i> &nbsp;letter will be replaced by current year in 2 digits representation; i.e. "03"
+</ul>
+<p>Example: if today is January, 2003 then "Y, M" caption string will be displayed as "2003, Jan".</p>
+<p>Start of the week: first day of the week can be either in European or American format.</p>
+<p>Year arrows: this option allows you to show and hide year arrows.</p>
+<p>Geometry: you can specify calendars geometry (vertical or horizontal).</p>
+',
+'template'=>'<h3>Templates configuration<a name="#templates_config"></a></h3>
+<p>You can output the event either using template or specifying corresponding event page URL:</p>
+',
+'secure'=>'<h3>Security configuration<a name="#security_config"></a></h3>
+<p>You can change login and password for access to PHP Event Calendar Control Panel page inserting any digits and Latin letters into corresponding form fields and clicking on &quot;change&quot; button.</p>',
+'browse_template'=>'<p><b>Event Browser Template</b>: Given template consists of header, event entry and footer. You can change it using the following variables:</p>
+<ul>
+	<i>%num</i> - event number<br>
+	<i>%title</i> - event title<br>
+	<i>%body</i> - event body
+</ul>
+<p>Events are output one by one in show.php file in the form specified in event template. To see all changes you should click on the desired date on calendar of main page.</p>
+',
+'arrows'=>'
+<p><b>Arrows settings</b><a name="#arrows_settings"></a>:</p>
+<p>While changing font or background color you can alter arrows design as well.</p>',
+'localization'=>'<p><b>Localization</b><a name="#localization"></a>:</p>
+<p>This option is very useful if you need monthes and weekdays localization.</p>'
+)
+?>
